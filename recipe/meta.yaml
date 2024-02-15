@@ -1,5 +1,5 @@
 {% set name = "flet-core" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet_core-{{ version }}.tar.gz
-  sha256: 251579e92c0886bb091d7fdfcd0288d11da8fc8f87e715c25d5bbbb818b220ff
+  sha256: 6a1d8ee84962c28386d0b450965c984384c97c73a4cdcc1a00ec3fe1152b32bf
 
 build:
   noarch: python
