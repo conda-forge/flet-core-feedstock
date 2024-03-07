@@ -1,5 +1,5 @@
 {% set name = "flet-core" %}
-{% set version = "0.21.0" %}
+{% set version = "0.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet_core-{{ version }}.tar.gz
-  sha256: 8aa867be5075121f0068eda1bed482c1c32b6c7574ca895ed2cbb446ecaa1f4e
+  sha256: 3d96386918ffcc1b871c83c79046d9d685c69c9c9e08ea8ff4fa7c8d86ce6782
 
 build:
   noarch: python
@@ -18,11 +18,10 @@ requirements:
   host:
     - pip
     - poetry-core
-    - python >=3.7.0,<4.0.0
+    - python >=3.8,<4.0
 
   run:
-    - python >=3.7.0,<4.0.0
-    - typing-extensions >=4.6.2,<5.0.0
+    - python >=3.8,<4.0
     - repath >=0.9.0,<0.10.0
 
 test:
