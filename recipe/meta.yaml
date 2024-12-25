@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flet_core-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flet_core-{{ version }}.tar.gz
   sha256: 1137109aec43b78a911f460a56e0e4581b4c411ba53e5c68fe785502e7e89498
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - poetry-core
-    - python >=3.8,<4.0
+    - python {{ python_min }}
 
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - repath >=0.9.0,<0.10.0
     - typing_extensions
 
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/flet-dev/flet
